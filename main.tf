@@ -59,15 +59,15 @@ resource "aws_s3_bucket_versioning" "name" {
 # }
 
 # Commenting this since this configuration is initialized in backend.hcl file
-terraform {
-  backend "s3" {
-    bucket = "terraform-up-and-running-state-for-denizkin"
-    key = "terraform.tfstate"
-    region = "eu-central-1"
+# terraform {
+#   backend "s3" {
+#     bucket = "terraform-up-and-running-state-for-denizkin"
+#     key = "terraform.tfstate"
+#     region = "eu-central-1"
    
-    dynamodb_table = "terraform-up-and-running-lock-for-denizkin"
-  }
-}
+#     dynamodb_table = "terraform-up-and-running-lock-for-denizkin"
+#   }
+# }
 
 resource "aws_dynamodb_table" "IlhamGayDynamoDB" {
   name = "terraform-up-and-running-lock-for-denizkin"
